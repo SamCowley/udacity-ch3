@@ -9,13 +9,13 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm i
 
 # Copy app source
-COPY www .
+COPY . .
 
 # Bind the port that the image will run on
 EXPOSE 8080
 
 # Define the Docker image's behavior at runtime
-CMD ["node", "server.js"]
+CMD ["npm", "run", "prod"]
