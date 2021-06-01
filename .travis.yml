@@ -16,15 +16,17 @@ before_script:
 script:
   - docker --version # print the version for logging
   - cd ./feed-service
-  - docker build -t udacity-ch3-feed --build-arg VAR=${VAR} .          # Build feed container
-  - docker tag udacity-ch3-feed     samcowley/udacity-ch3-feed:latest
+  - docker build -t udacity-ch3-feed .          # Build feed container
+  - docker tag udacity-ch3-feed samcowley/udacity-ch3-feed:latest
   - cd ../user-service
-  - docker build -t udacity-ch3-user --build-arg VAR=${VAR} .          # Build user container
-  - docker tag udacity-ch3-user     samcowley/udacity-ch3-user:latest
+  - docker build -t udacity-ch3-user .          # Build user container
+  - docker tag udacity-ch3-user samcowley/udacity-ch3-user:latest
   - cd ../frontend-service
-  - docker build -t udacity-ch3-frontend --build-arg VAR=${VAR} .      # Build frontend container
+  - docker build -t udacity-ch3-frontend .      # Build frontend container
   - docker tag udacity-ch3-frontend samcowley/udacity-ch3-frontend:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push samcowley/udacity-ch3-feed
+  - docker push samcowley/udacity-ch3-user
+  - docker push samcowley/udacity-ch3-frontend
