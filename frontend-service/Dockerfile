@@ -19,4 +19,5 @@ RUN ionic build
 
 # Final container
 FROM nginx:alpine
+EXPOSE 80
 COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
