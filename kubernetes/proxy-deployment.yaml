@@ -17,5 +17,11 @@ spec:
       containers:
       - name: udacity-ch3-proxy
         image: samcowley/udacity-ch3-proxy
-        ports:
-        - containerPort: 80
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "10m"
+          limits:
+            memory: "512Mi"
+            cpu: "100m"

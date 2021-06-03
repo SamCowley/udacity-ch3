@@ -6,7 +6,9 @@ metadata:
     run: proxy
 spec:
   ports:
-  - port: 80
+  - name: http
+    port: 8080
+    targetPort: 8080
     protocol: TCP
   selector:
     run: proxy

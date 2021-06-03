@@ -26,8 +26,6 @@ spec:
           limits:
             memory: "1024Mi"
             cpu: "512m"
-        ports:
-        - containerPort: 8080
         env:
         - name: NODE_OPTIONS
           value: "--max-old-space-size=8192"

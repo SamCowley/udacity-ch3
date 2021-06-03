@@ -27,7 +27,7 @@ spec:
             memory: "512Mi"
             cpu: "512m"
         ports:
-        - containerPort: 8100
+        - containerPort: 80
         env:
         - name: POSTGRES_USERNAME
           valueFrom:
