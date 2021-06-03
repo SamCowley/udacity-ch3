@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: proxy
   labels:
-    run: proxy
+    service: proxy
 spec:
   ports:
   - name: http
     port: 8080
     targetPort: 8080
-    protocol: TCP
   selector:
-    run: proxy
+    service: proxy
+  type: LoadBalancer

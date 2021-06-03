@@ -10,4 +10,4 @@ data:
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   FRONTEND_URL: http://localhost:8100
-  BACKEND_URL: http://localhost:8080
+  BACKEND_URL: http://localhost:8100

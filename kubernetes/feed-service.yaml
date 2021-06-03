@@ -3,12 +3,11 @@ kind: Service
 metadata:
   name: feed
   labels:
-    run: feed
+    service: feed
 spec:
   ports:
   - name: http
     port: 8080
     targetPort: 8080
-    protocol: TCP
   selector:
-    run: feed
+    service: feed
