@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: proxy
   labels:
-    app: proxy
+    service: proxy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: proxy
+      service: proxy
   template:
     metadata:
       labels:
-        app: proxy
+        service: proxy
     spec:
       containers:
       - name: udacity-ch3-proxy

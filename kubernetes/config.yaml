@@ -4,7 +4,7 @@ metadata:
   name: config
 data:
   POSTGRES_USERNAME: postgres
-  POSTGRES_HOST: scowley-ch3-rds.cmmwfio3stmb.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: scowley-ch3-rds.cgtg1yjqgyjw.us-east-2.rds.amazonaws.com
   POSTGRES_DB: postgres
   AWS_BUCKET: scowley-ch3-s3
   AWS_REGION: us-east-1
