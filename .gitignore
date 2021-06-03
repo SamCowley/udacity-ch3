@@ -1,3 +1,5 @@
 www
 node_modules
 /set_env.sh
+/kubernetes/aws-secrets.yaml
+/kubernetes/secrets.yaml
